@@ -1,8 +1,8 @@
 Encoding: UTF-8
 Type: Package
-Package: mr.ash
-Version: 0.1-88
-Date: 2023-10-27
+Package: mr.ashr
+Version: 0.1-89
+Date: 2025-12-16
 Title: Multiple Regression with Adaptive Shrinkage
 Authors@R: c(person("Youngseok","Kim",role=c("aut","cre"),
                     email="youngseok@uchicago.edu"),
@@ -12,8 +12,8 @@ Authors@R: c(person("Youngseok","Kim",role=c("aut","cre"),
                     email="peter.carbonetto@gmail.com"),
              person("Matthew","Stephens",role="aut"),
              person("Eric","Weine",role="aut"))
-URL: https://github.com/stephenslab/mr.ash
-BugReports: https://github.com/stephenslab/mr.ash/issues
+URL: https://github.com/stephenslab/mr.ashr
+BugReports: https://github.com/stephenslab/mr.ashr/issues
 Description: Implements variational empirical Bayes methods for linear
     regression. Coordinate-wise optimization algorithms for model fitting
     are implemented in C++ for efficient handling of large-scale data
@@ -36,5 +36,5 @@ Suggests:
     mr.ash.alpha
 NeedsCompilation: yes
 VignetteBuilder: knitr
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.1
 Remotes: stephenslab/mr.ash.alpha

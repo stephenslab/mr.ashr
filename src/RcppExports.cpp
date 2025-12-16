@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // random_order
 arma::uvec random_order(int p, int numiter);
-RcppExport SEXP _mr_ash_random_order(SEXP pSEXP, SEXP numiterSEXP) {
+RcppExport SEXP _mr_ashr_random_order(SEXP pSEXP, SEXP numiterSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -25,7 +25,7 @@ END_RCPP
 }
 // mr_ash_rcpp
 List mr_ash_rcpp(const arma::mat& X, const arma::vec& y, const arma::vec& w, const arma::vec& sa2, arma::vec& pi, arma::vec& beta, arma::vec& r, double sigma2, const arma::uvec& o, int maxiter, int miniter, double convtol, double epstol, std::string method_q, bool updatepi, bool updatesigma, int verbose);
-RcppExport SEXP _mr_ash_mr_ash_rcpp(SEXP XSEXP, SEXP ySEXP, SEXP wSEXP, SEXP sa2SEXP, SEXP piSEXP, SEXP betaSEXP, SEXP rSEXP, SEXP sigma2SEXP, SEXP oSEXP, SEXP maxiterSEXP, SEXP miniterSEXP, SEXP convtolSEXP, SEXP epstolSEXP, SEXP method_qSEXP, SEXP updatepiSEXP, SEXP updatesigmaSEXP, SEXP verboseSEXP) {
+RcppExport SEXP _mr_ashr_mr_ash_rcpp(SEXP XSEXP, SEXP ySEXP, SEXP wSEXP, SEXP sa2SEXP, SEXP piSEXP, SEXP betaSEXP, SEXP rSEXP, SEXP sigma2SEXP, SEXP oSEXP, SEXP maxiterSEXP, SEXP miniterSEXP, SEXP convtolSEXP, SEXP epstolSEXP, SEXP method_qSEXP, SEXP updatepiSEXP, SEXP updatesigmaSEXP, SEXP verboseSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -52,12 +52,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_mr_ash_random_order", (DL_FUNC) &_mr_ash_random_order, 2},
-    {"_mr_ash_mr_ash_rcpp", (DL_FUNC) &_mr_ash_mr_ash_rcpp, 17},
+    {"_mr_ashr_random_order", (DL_FUNC) &_mr_ashr_random_order, 2},
+    {"_mr_ashr_mr_ash_rcpp", (DL_FUNC) &_mr_ashr_mr_ash_rcpp, 17},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_mr_ash(DllInfo *dll) {
+RcppExport void R_init_mr_ashr(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

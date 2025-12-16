@@ -1,22 +1,15 @@
-# mr.ash
+# mr.ashr
 
-[![Travis CI Build Status](https://app.travis-ci.com/stephenslab/mr.ash.svg?branch=master)](https://app.travis-ci.com/stephenslab/mr.ash)
-[![R-CMD-check](https://github.com/stephenslab/mr.ash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/stephenslab/mr.ash/actions/workflows/R-CMD-check.yaml)
-[![CircleCI build status](https://dl.circleci.com/status-badge/img/gh/stephenslab/mr.ash/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/stephenslab/mr.ash/tree/master)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/5ajikmfnhobvm4d7?svg=true)](https://ci.appveyor.com/project/pcarbo/mr-ash)
-[![codecov](https://codecov.io/gh/stephenslab/mr.ash/branch/master/graph/badge.svg?token=0VBKJTPK3U)](https://codecov.io/gh/stephenslab/mr.ash)
-
-R package implementing Multiple Regression with Adaptive Shrinkage
-("mr.ash") methods and algorithms.
+Multiple Regression with Adaptive Shrinkage in R ("mr.ashr")
 
 ## Quick Start
 
-To install the latest version of the `mr.ash` package
+To install the latest version of the `mr.ashr` package
 from GitHub, use [remotes][remotes]:
 
 ```R
 install.packages("remotes")
-remotes::install_github("stephenslab/mr.ash")
+remotes::install_github("stephenslab/mr.ashr")
 ```
 
 This command should automatically install all required packages if
@@ -24,7 +17,7 @@ they are not installed already.
 
 ## License
 
-Copyright (c) 2018-2022, Youngseok Kim, Peter Carbonetto and Matthew
+Copyright (c) 2018-2025, Youngseok Kim, Peter Carbonetto and Matthew
 Stephens.
 
 All source code and software in this repository are made available
@@ -33,7 +26,7 @@ file [LICENSE](LICENSE) for the full text of the license.
 
 ## Credits
 
-The mr.ash R package was developed by [Youngseok Kim][youngseok] and
+The mr.ashr R package was developed by [Youngseok Kim][youngseok] and
 [Peter Carbonetto][peter] at the [University of Chicago][uchicago],
 with help from [Matthew Stephens][matthew].
 

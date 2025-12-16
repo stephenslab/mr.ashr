@@ -1,3 +1,3 @@
 library(testthat)
-library(mr.ash)
-test_check("mr.ash")
+library(mr.ashr)
+test_check("mr.ashr")

@@ -1,8 +1,8 @@
 ---
-title: "Introduction to Mr.ASH"
+title: "Introduction to the mr.ashr package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction to Mr.ASH}
+  %\VignetteIndexEntry{Introduction to mr.ashr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,16 +14,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-Here we go through a simple example of using Multiple Regression Adaptive Shrinkage, < maybe insert paper link here? >
+Here we go through a simple example of using Multiple Regression
+Adaptive Shrinkage, < maybe insert paper link here? >
 
 ```{r setup}
-library(mr.ash)
+library(mr.ashr)
 ```
-
 
 ## Step 1: Data Simulation
 
-We simulate a regression data matrix X with n = 400 samples and p = 2000 variables, and a normal response vector y: 
+We simulate a regression data matrix X with n = 400 samples and p =
+2000 variables, and a normal response vector y:
 
 ```{r}
 set.seed(1)
@@ -38,7 +39,6 @@ source("../R/misc2.R")
 source("../R/datasim.R")
 sim_data <- simulate_data(n, p, pve, s)
 ```
-
 
 ## Step 2: Fitting Mr.ASH
 
@@ -75,13 +75,18 @@ fit <- mr_ash(sim_data$X,sim_data$y,
 # Mr.ASH terminated at iteration 500.
 ```
 
-The default model is a mixture with 20 components, with prior mixture component variances in increasing order, starting at zero and ending at roughly 1: 
+The default model is a mixture with 20 components, with prior mixture
+component variances in increasing order, starting at zero and ending
+at roughly 1:
 
 ```{r}
 fit$sa2
 ```
 
-For each iteration, we calculate the Evidence Lower Bound (ELBO) until the maximum iterations specified is reached (in the case demonstrated here), or when convergence criterion is met. We can observe that the estimated $\beta$ is a good reflection of the 
+For each iteration, we calculate the Evidence Lower Bound (ELBO) until
+the maximum iterations specified is reached (in the case demonstrated
+here), or when convergence criterion is met. We can observe that the
+estimated $\beta$ is a good reflection of the
 
 ```{r}
 elbo <- fit$progress$elbo
@@ -104,7 +109,8 @@ head(posterior$s2)
 head(posterior$lfsr)
 ```
 
-Posterior means and variances are $p \times K$ matrices, while posterior local false discovery rate (lfsr) is a vector of length $p$. 
+Posterior means and variances are $p \times K$ matrices, while
+posterior local false discovery rate (lfsr) is a vector of length $p$.
 
 ## Session Information: 
 
